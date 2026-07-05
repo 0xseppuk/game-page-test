@@ -1,7 +1,14 @@
 import { useEffect, useRef, type RefObject } from "react"
 
-export function useDismiss<T extends Element>(ref: RefObject<T | null>, onDismiss: () => void, enabled = true) {
+const FLOATING_PANEL_SELECTOR = "[data-floating-panel]"
+
+export function useDismiss<T extends Element>(
+  refs: RefObject<T | null> | RefObject<T | null>[],
+  onDismiss: () => void,
+  enabled = true
+) {
   const onDismissRef = useRef(onDismiss)
+  const refsList = Array.isArray(refs) ? refs : [refs]
 
   useEffect(() => {
     onDismissRef.current = onDismiss
@@ -11,9 +18,10 @@ export function useDismiss<T extends Element>(ref: RefObject<T | null>, onDismis
     if (!enabled) return
 
     function handlePointerDown(event: PointerEvent) {
-      if (ref.current && !ref.current.contains(event.target as Node)) {
-        onDismissRef.current()
-      }
+      const target = event.target as Element | null
+      const isInside = refsList.some((ref) => ref.current?.contains(target as Node))
+      const isInFloatingPanel = target?.closest(FLOATING_PANEL_SELECTOR)
+      if (!isInside && !isInFloatingPanel) onDismissRef.current()
     }
 
     function handleKeyDown(event: KeyboardEvent) {
@@ -28,5 +36,6 @@ export function useDismiss<T extends Element>(ref: RefObject<T | null>, onDismis
       document.removeEventListener("pointerdown", handlePointerDown)
       document.removeEventListener("keydown", handleKeyDown)
     }
-  }, [ref, enabled])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enabled, ...refsList])
 }

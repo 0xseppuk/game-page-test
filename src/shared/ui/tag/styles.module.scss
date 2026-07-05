@@ -1,0 +1,45 @@
+@use "~styles/app.scss" as *;
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-brand-text-blue;
+  white-space: nowrap;
+  cursor: pointer;
+  background: rgb(92 128 253 / 8%);
+  border: none;
+  border-radius: $border-radius-default;
+  @include transition(background 0.15s, color 0.15s);
+
+  &:hover {
+    color: $color-brand-blue-hover;
+    background: rgb(92 128 253 / 14%);
+  }
+
+  &_active {
+    color: $color-white;
+    background: $color-brand-text-blue;
+
+    &:hover {
+      color: $color-white;
+      background: $color-brand-blue-hover;
+    }
+  }
+}
+
+.count {
+  margin-left: 4px;
+  color: inherit;
+  opacity: 0.7;
+  @include transition(opacity 0.15s);
+}
+
+.tag:hover .count,
+.tag_active .count {
+  opacity: 0.85;
+}

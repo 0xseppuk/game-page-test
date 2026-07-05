@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { inter } from "@/shared/config/fonts"
+import { SiteHeader } from "@/widgets/site-header"
 import "./globals.scss"
 
 export const metadata: Metadata = {
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={inter.variable}>
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,5 +1,21 @@
-import { SiteHeader } from "@/widgets/site-header"
+import { GameHero } from "./components/GameHero"
+import { GameCategories } from "./components/GameCategories"
+import { GameFilters } from "./components/GameFilters"
+import { GameToolbar } from "./components/GameToolbar"
+import styles from "./styles.module.scss"
 
 export function GamePage() {
-  return <SiteHeader />
+  return (
+    <main className={styles.page}>
+      <div className={styles.container}>
+        <GameHero />
+        <GameCategories />
+        <hr className={styles.divider} />
+        <div className={styles.content}>
+          <GameFilters />
+          <GameToolbar />
+        </div>
+      </div>
+    </main>
+  )
 }

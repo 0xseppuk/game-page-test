@@ -1,0 +1,1 @@
+export { GameCategories } from "./GameCategories"

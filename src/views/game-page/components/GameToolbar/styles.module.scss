@@ -1,0 +1,28 @@
+@use "~styles/app.scss" as *;
+
+.toolbar {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.instant {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.bolt {
+  color: $color-brand-blue;
+}
+
+.search {
+  width: 280px;
+  border-radius: $border-radius-md;
+
+  input {
+    height: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}

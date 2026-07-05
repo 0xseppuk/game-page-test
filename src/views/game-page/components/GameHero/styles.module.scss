@@ -1,0 +1,37 @@
+@use "~styles/app.scss" as *;
+
+.hero {
+  position: relative;
+}
+
+.info {
+  max-width: 580px;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: $color-text-muted;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color-text-gray;
+}
+
+.imageBox {
+  position: absolute;
+  top: -40px;
+  right: -64px;
+  width: 450px;
+  height: 450px;
+  pointer-events: none;
+}
+
+.image {
+  object-fit: contain;
+}

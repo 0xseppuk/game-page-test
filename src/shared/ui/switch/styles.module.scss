@@ -1,0 +1,56 @@
+@use "~styles/app.scss" as *;
+
+.wrapper {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid $color-border-gray;
+  border-radius: $border-radius-md;
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-text-muted;
+}
+
+.track {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 32px;
+  height: 20px;
+  background: #dfe2e8;
+  border-radius: 999px;
+  @include transition(background, 0.15s);
+
+  &:has(.input:checked) {
+    background: $color-brand-blue;
+  }
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+  opacity: 0;
+
+  &:checked ~ .thumb {
+    transform: translateX(12px);
+  }
+}
+
+.thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: $color-white;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 $color-shadow-neutral;
+  @include transition(transform, 0.15s);
+}

@@ -1,0 +1,62 @@
+@use "~styles/app.scss" as *;
+
+.filters {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+
+  button {
+    height: 36px;
+  }
+}
+
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+
+  button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+.delivery {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-text-muted;
+  cursor: pointer;
+  background: $color-white;
+  border: 1px solid $color-border-gray;
+  border-radius: $border-radius-default;
+  @include transition(background-color 0.15s, border-color 0.15s);
+
+  &:hover {
+    border-color: #d4d8e0;
+  }
+
+  &_open {
+    background: $color-shadow-neutral-ring;
+    border-color: #d4d8e0;
+  }
+}
+
+.chevron {
+  color: $color-icon-muted;
+  transition: transform 0.15s ease;
+}
+
+.chevron_closed {
+  transform: rotate(180deg);
+}
+
+.sellButton {
+  width: 166px;
+  border-radius: $border-radius-md;
+}

@@ -7,24 +7,28 @@ import styles from "./styles.module.scss"
 export function SiteHeader() {
   return (
     <header className={styles.header}>
-      <div>
-        <MainLogo />
-        <Input
-          className={styles.search}
-          startDecorator={<SearchIcon />}
-          placeholder="Поиск игр и приложений..."
-          maxLength={30}
-          name="search_field"
-        />
-      </div>
-      <div>
-        <nav className={styles.nav}>
-          <NavDropdown label="Поддержка" />
-          <NavDropdown label="Русский" />
-          <NavDropdown label="RUB" />
-        </nav>
-        <Button variant="white">Вход</Button>
-        <Button variant="blue">Регистрация</Button>
+      <div className={styles.container}>
+        <div className={styles.brand}>
+          <MainLogo />
+          <Input
+            className={styles.search}
+            startDecorator={<SearchIcon />}
+            placeholder="Поиск игр и приложений..."
+            maxLength={30}
+            name="search_field"
+          />
+        </div>
+        <div className={styles.actions}>
+          <nav className={styles.nav}>
+            <NavDropdown label="Поддержка" />
+            <NavDropdown label="Русский" />
+            <NavDropdown label="RUB" />
+          </nav>
+          <div className={styles.buttons}>
+            <Button variant="white">Вход</Button>
+            <Button variant="blue">Регистрация</Button>
+          </div>
+        </div>
       </div>
     </header>
   )

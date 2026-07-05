@@ -1,0 +1,36 @@
+@use "~styles/app.scss" as *;
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.tab {
+  height: 32px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: $color-brand-text-blue;
+  cursor: pointer;
+  background: rgb(92 128 253 / 8%);
+  border: none;
+  border-radius: $border-radius-default;
+  @include transition(background 0.15s, color 0.15s);
+
+  &:hover {
+    color: $color-brand-blue-hover;
+    background: rgb(92 128 253 / 14%);
+  }
+
+  &_active {
+    color: $color-white;
+    background: $color-brand-text-blue;
+
+    &:hover {
+      color: $color-white;
+      background: $color-brand-blue-hover;
+    }
+  }
+}
