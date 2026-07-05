@@ -49,6 +49,9 @@
   &:focus {
     outline: none;
     border-color: $color-brand-blue;
+    &::placeholder {
+      color: $color-text-gray;
+    }
   }
 
   &_hasStartDecorator {
