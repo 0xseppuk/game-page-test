@@ -7,23 +7,25 @@ import styles from "./styles.module.scss"
 
 interface NavDropdownProps {
   label: string
-  items?: string[]
+  items: string[]
+  onSelect?: (item: string) => void
+  selected?: string
 }
 
-const DEFAULT_ITEMS = ["Пункт меню", "Пункт меню", "Пункт меню", "Пункт меню"]
-
-export function NavDropdown({ label, items = DEFAULT_ITEMS }: NavDropdownProps) {
+export function NavDropdown({ label, items, onSelect, selected }: NavDropdownProps) {
   return (
     <Dropdown
       trigger={({ open, toggle }) => (
         <button type="button" className={cn(styles.trigger, open && styles.trigger_open)} onClick={toggle}>
-          <span>{label}</span>
+          <span>{selected ?? label}</span>
           <ChevronIcon className={cn(styles.chevron, !open && styles.chevron_closed)} />
         </button>
       )}
     >
-      {items.map((item, index) => (
-        <DropdownItem key={index}>{item}</DropdownItem>
+      {items.map((item) => (
+        <DropdownItem key={item} onClick={() => onSelect?.(item)}>
+          {item}
+        </DropdownItem>
       ))}
     </Dropdown>
   )

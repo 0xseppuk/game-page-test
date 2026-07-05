@@ -15,7 +15,6 @@ $offers-grid-columns: 1fr 232px 104px 104px;
 .description {
   text-align: left;
   max-width: 616px;
-  max-height: 24px;
 }
 
 .seller {
@@ -59,6 +58,10 @@ $offers-grid-columns: 1fr 232px 104px 104px;
   gap: 24px;
   @include transition(background-color, 0.15s);
 
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+
   &:last-child {
     border-bottom: none;
   }
@@ -66,6 +69,7 @@ $offers-grid-columns: 1fr 232px 104px 104px;
 
 .itemContent {
   display: grid;
+  margin-top: 8px;
   grid-template-columns: $offers-grid-columns;
   gap: 16px;
   align-items: center;
@@ -79,6 +83,10 @@ $offers-grid-columns: 1fr 232px 104px 104px;
 
   &:hover {
     background: $color-surface-hover-subtle;
+  }
+
+  &:not(:first-child) {
+    margin-top: 8px;
   }
 }
 
@@ -182,6 +190,8 @@ $offers-grid-columns: 1fr 232px 104px 104px;
   font-size: inherit;
   font-weight: 500;
   line-height: inherit;
+  font-weight: 24px;
+  letter-spacing: 0;
 }
 
 .footerList {

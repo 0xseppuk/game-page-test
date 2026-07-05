@@ -7,13 +7,18 @@
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr auto;
-  gap: 64px;
+  display: flex;
+  justify-content: space-between;
   align-items: start;
   max-width: $container-max-width;
-  padding: 32px 0 40px;
+  padding: 32px 0 44px;
   margin: 0 auto;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  gap: 88px;
 }
 
 .about {
@@ -37,7 +42,7 @@
   font-size: 14px;
   line-height: 20px;
   color: $color-text-gray;
-
+  max-width: 232px;
   a {
     width: fit-content;
     @include transition(color, 0.15s);
@@ -49,10 +54,17 @@
 }
 
 .title {
-  font-size: inherit;
+  font-size: 16px;
   font-weight: 500;
-  line-height: inherit;
+  line-height: 24px;
   color: $color-text-muted;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  gap: 4px;
 }
 
 .socials {
@@ -62,45 +74,48 @@
 }
 
 .social {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  @include transition(transform, 0.15s);
+  @include transition(transform, 0.2s);
 
-  svg {
-    width: 22px;
-    height: 22px;
-    fill: currentcolor;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    z-index: -1;
+    background: var(--social-glow-color, transparent);
+    border-radius: 50%;
+    opacity: 0;
+    filter: blur(10px);
+    @include transition(opacity, 0.2s);
   }
 
   &:hover {
     transform: translateY(-2px);
-  }
 
-  &_telegram {
-    color: #39afea;
-    background: #effaff;
-    border: 1px solid #d7f0fc;
+    &::after {
+      opacity: 0.5;
+    }
   }
+}
 
-  &_discord {
-    color: #5865f2;
-    background: #f2f3ff;
-    border: 1px solid #dfe2ff;
-  }
+.social_telegram {
+  --social-glow-color: rgb(41 182 246 / 45%);
+}
 
-  &_vk {
-    color: #477ead;
-    background: #f1f6fb;
-    border: 1px solid #dce9f4;
-  }
+.social_discord {
+  --social-glow-color: rgb(88 101 242 / 45%);
+}
 
-  &_youtube {
-    color: #ff5b5b;
-    background: #fff3f3;
-    border: 1px solid #ffe0e0;
-  }
+.social_vk {
+  --social-glow-color: rgb(0 119 255 / 45%);
+}
+
+.social_youtube {
+  --social-glow-color: rgb(255 0 0 / 45%);
 }
