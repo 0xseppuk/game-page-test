@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { useDisclosure } from "@/shared/lib/hooks"
 import { Tabs } from "@/shared/ui/tabs"
 import { Dropdown, DropdownItem } from "@/shared/ui/dropdown"
@@ -15,6 +16,7 @@ const DELIVERY_METHODS = ["Любой", "Мгновенная", "Ручная"]
 
 export function GameFilters() {
   const { isOpen, open, close } = useDisclosure()
+  const [deliveryMethod, setDeliveryMethod] = useState<string | null>(null)
 
   return (
     <>
@@ -24,13 +26,15 @@ export function GameFilters() {
           <Dropdown
             trigger={({ open, toggle }) => (
               <button type="button" className={cn(styles.delivery, open && styles.delivery_open)} onClick={toggle}>
-                <span>Способ доставки</span>
+                <span>{deliveryMethod ?? "Способ доставки"}</span>
                 <ChevronIcon className={cn(styles.chevron, !open && styles.chevron_closed)} />
               </button>
             )}
           >
             {DELIVERY_METHODS.map((method) => (
-              <DropdownItem key={method}>{method}</DropdownItem>
+              <DropdownItem key={method} onClick={() => setDeliveryMethod(method)}>
+                {method}
+              </DropdownItem>
             ))}
           </Dropdown>
         </div>

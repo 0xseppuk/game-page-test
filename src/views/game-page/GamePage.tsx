@@ -2,6 +2,7 @@ import { GameHero } from "./components/GameHero"
 import { GameCategories } from "./components/GameCategories"
 import { GameFilters } from "./components/GameFilters"
 import { GameToolbar } from "./components/GameToolbar"
+import { OffersTable } from "./components/OffersTable"
 import styles from "./styles.module.scss"
 
 export function GamePage() {
@@ -14,6 +15,7 @@ export function GamePage() {
         <div className={styles.content}>
           <GameFilters />
           <GameToolbar />
+          <OffersTable />
         </div>
       </div>
     </main>

@@ -30,7 +30,7 @@ export function Dropdown({ trigger, children, className, panelClassName }: Dropd
   const panelRef = useRef<HTMLDivElement>(null)
   const [coords, setCoords] = useState<Coords | null>(null)
 
-  useDismiss([rootRef, panelRef], close, isOpen)
+  useDismiss(rootRef, close, isOpen)
 
   useLayoutEffect(() => {
     if (!isOpen || !rootRef.current) return

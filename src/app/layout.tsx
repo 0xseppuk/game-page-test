@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { inter } from "@/shared/config/fonts"
+import { SiteFooter } from "@/widgets/site-footer"
 import { SiteHeader } from "@/widgets/site-header"
 import "./globals.scss"
 
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <SiteHeader />
         {children}
+        <SiteFooter />
       </body>
     </html>
   )

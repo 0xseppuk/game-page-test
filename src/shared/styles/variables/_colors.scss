@@ -7,13 +7,17 @@ $color-brand-blue: #4e75ff;
 $color-brand-blue-hover: #3d63e8;
 $color-brand-blue-ring: #4665d2;
 $color-brand-text-blue: #5c80fd;
+$color-brand-surface: rgb(92 128 253 / 8%);
+$color-brand-surface-hover: rgb(92 128 253 / 14%);
 
 // Text colors
+$color-text-default: #171717;
 $color-text-muted: #36394a;
 $color-text-gray: #6e7076;
 
 // border colors
 $color-border-gray: #e8ebf0;
+$color-border-control-hover: #d4d8e0;
 $color-border-gray-hover: #9e9da4;
 
 // Icon colors
@@ -24,8 +28,18 @@ $color-status-green: #2ecc71;
 $color-status-orange: #f5a623;
 $color-status-red: #ff5b5b;
 
+// Rating colors
+$color-rating-high: $color-status-green;
+$color-rating-high-bg: rgb(46 204 113 / 8%);
+$color-rating-mid: $color-status-orange;
+$color-rating-mid-bg: rgb(245 166 35 / 8%);
+$color-rating-low: $color-status-red;
+$color-rating-low-bg: rgb(255 91 91 / 8%);
+
 // Surface colors
 $color-surface-muted: #f4f5f7;
+$color-surface-hover: #f5f6f8;
+$color-surface-hover-subtle: #f7f7f7a3;
 
 // Shadow colors
 $color-shadow-neutral: rgb(164 172 185 / 24%);

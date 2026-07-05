@@ -53,12 +53,12 @@
   @include transition(background-color 0.15s, border-color 0.15s);
 
   &:hover {
-    border-color: #d4d8e0;
+    border-color: $color-border-control-hover;
   }
 
   &_open {
     background: $color-shadow-neutral-ring;
-    border-color: #d4d8e0;
+    border-color: $color-border-control-hover;
   }
 }
 

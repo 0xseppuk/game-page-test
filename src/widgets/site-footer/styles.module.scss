@@ -1,0 +1,106 @@
+@use "~styles/app.scss" as *;
+
+.footer {
+  width: 100%;
+  background: $color-white;
+  border-top: 1px solid $color-border-gray;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 64px;
+  align-items: start;
+  max-width: $container-max-width;
+  padding: 32px 0 40px;
+  margin: 0 auto;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 296px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-text-gray;
+
+  svg {
+    margin-bottom: 4px;
+  }
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-text-gray;
+
+  a {
+    width: fit-content;
+    @include transition(color, 0.15s);
+
+    &:hover {
+      color: $color-text-muted;
+    }
+  }
+}
+
+.title {
+  font-size: inherit;
+  font-weight: 500;
+  line-height: inherit;
+  color: $color-text-muted;
+}
+
+.socials {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  @include transition(transform, 0.15s);
+
+  svg {
+    width: 22px;
+    height: 22px;
+    fill: currentcolor;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &_telegram {
+    color: #39afea;
+    background: #effaff;
+    border: 1px solid #d7f0fc;
+  }
+
+  &_discord {
+    color: #5865f2;
+    background: #f2f3ff;
+    border: 1px solid #dfe2ff;
+  }
+
+  &_vk {
+    color: #477ead;
+    background: #f1f6fb;
+    border: 1px solid #dce9f4;
+  }
+
+  &_youtube {
+    color: #ff5b5b;
+    background: #fff3f3;
+    border: 1px solid #ffe0e0;
+  }
+}

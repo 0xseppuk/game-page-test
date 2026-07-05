@@ -1,0 +1,189 @@
+@use "~styles/app.scss" as *;
+
+$offers-grid-columns: 1fr 232px 110px 100px;
+
+.table {
+  margin-top: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: $offers-grid-columns;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 14px;
+  color: $color-text-gray;
+}
+
+.description {
+  text-align: left;
+}
+
+.seller {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.sortButton {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  @include transition(color, 0.15s);
+
+  &:hover {
+    color: $color-text-muted;
+  }
+}
+
+.sortIcon {
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  padding: 8px 0;
+  border-bottom: 1px solid $color-border-gray;
+  @include transition(background-color, 0.15s);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.itemContent {
+  display: grid;
+  grid-template-columns: $offers-grid-columns;
+  gap: 16px;
+  align-items: center;
+  min-height: 59px;
+  padding: 12px 4px;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-text-muted;
+  cursor: pointer;
+  border-radius: $border-radius-md;
+
+  &:hover {
+    background: $color-surface-hover-subtle;
+  }
+}
+
+.sellerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.sellerName {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.rating {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 2px;
+  align-items: center;
+  padding: 1px 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: $border-radius-default;
+
+  &_high {
+    color: $color-rating-high;
+    background: $color-rating-high-bg;
+  }
+
+  &_mid {
+    color: $color-rating-mid;
+    background: $color-rating-mid-bg;
+  }
+
+  &_low {
+    color: $color-rating-low;
+    background: $color-rating-low-bg;
+  }
+}
+
+.star {
+  flex-shrink: 0;
+}
+
+.sellerMeta {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  color: $color-text-gray;
+  white-space: nowrap;
+}
+
+.availability {
+  text-align: right;
+}
+
+.price {
+  font-weight: 600;
+  text-align: right;
+}
+
+.moreButton {
+  width: 100%;
+  height: 40px;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 40px;
+  background: $color-border-gray;
+  border: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 24px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-text-gray;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerTitle {
+  font-size: inherit;
+  font-weight: 500;
+  line-height: inherit;
+}
+
+.footerList {
+  padding-left: 20px;
+}

@@ -23,7 +23,8 @@
       0 0 0 1px $color-shadow-neutral-ring;
 
     &:hover {
-      background: linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, rgb(193 199 208 / 2%) 100%), #f5f6f8;
+      background:
+        linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, rgb(193 199 208 / 2%) 100%), $color-surface-hover;
     }
   }
 
