@@ -34,7 +34,7 @@
   cursor: pointer;
   background: $color-white;
   border: 1px solid $color-border-gray;
-  border-radius: $border-radius-default;
+  border-radius: $border-radius-md;
   @include transition(background-color 0.15s, border-color 0.15s);
 
   &:hover {

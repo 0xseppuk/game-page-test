@@ -1,23 +1,21 @@
 @use "~styles/app.scss" as *;
 
-$offers-grid-columns: 1fr 232px 110px 100px;
-
-.table {
-  margin-top: 16px;
-}
+$offers-grid-columns: 1fr 232px 104px 104px;
 
 .row {
   display: grid;
   grid-template-columns: $offers-grid-columns;
   gap: 16px;
   align-items: center;
-  padding: 12px 0;
+  padding: 16px 0 12px 0;
   font-size: 14px;
   color: $color-text-gray;
 }
 
 .description {
   text-align: left;
+  max-width: 616px;
+  max-height: 24px;
 }
 
 .seller {
@@ -53,12 +51,12 @@ $offers-grid-columns: 1fr 232px 110px 100px;
 .list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .item {
-  padding: 8px 0;
+  padding: 0 0 8px 0;
   border-bottom: 1px solid $color-border-gray;
+  gap: 24px;
   @include transition(background-color, 0.15s);
 
   &:last-child {
@@ -72,7 +70,7 @@ $offers-grid-columns: 1fr 232px 110px 100px;
   gap: 16px;
   align-items: center;
   min-height: 59px;
-  padding: 12px 4px;
+  padding: 8px 4px;
   font-size: 16px;
   line-height: 24px;
   color: $color-text-muted;
@@ -106,10 +104,12 @@ $offers-grid-columns: 1fr 232px 110px 100px;
   flex-shrink: 0;
   gap: 2px;
   align-items: center;
-  padding: 1px 6px;
-  font-size: 13px;
+  padding: 2px 4px;
+  font-size: 12px;
   font-weight: 600;
   border-radius: $border-radius-default;
+  height: 22px;
+  width: 41px;
 
   &_high {
     color: $color-rating-high;

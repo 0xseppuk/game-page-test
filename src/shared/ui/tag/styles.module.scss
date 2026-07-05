@@ -6,7 +6,7 @@
   height: 32px;
   padding: 4px 12px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 20px;
   color: $color-brand-text-blue;
   white-space: nowrap;
@@ -14,7 +14,6 @@
   background: $color-brand-surface;
   border: none;
   border-radius: $border-radius-default;
-  @include transition(background 0.15s, color 0.15s);
 
   &:hover {
     color: $color-brand-blue-hover;

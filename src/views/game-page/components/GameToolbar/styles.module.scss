@@ -17,8 +17,23 @@
   color: $color-brand-blue;
 }
 
+.onlineSwitch {
+  flex: 0 0 234px;
+  justify-content: space-between;
+  width: 234px;
+  white-space: nowrap;
+}
+
+.deliverySwitch {
+  flex: 0 0 249px;
+  justify-content: space-between;
+  width: 249px;
+  white-space: nowrap;
+}
+
 .search {
-  width: 280px;
+  flex: 0 0 317px;
+  width: 317px;
   border-radius: $border-radius-md;
 
   input {

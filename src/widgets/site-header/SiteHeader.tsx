@@ -25,8 +25,12 @@ export function SiteHeader() {
             <NavDropdown label="RUB" />
           </nav>
           <div className={styles.buttons}>
-            <Button variant="white">Вход</Button>
-            <Button variant="blue">Регистрация</Button>
+            <Button variant="white" className={styles.loginButton}>
+              Вход
+            </Button>
+            <Button variant="blue" className={styles.registerButton}>
+              Регистрация
+            </Button>
           </div>
         </div>
       </div>

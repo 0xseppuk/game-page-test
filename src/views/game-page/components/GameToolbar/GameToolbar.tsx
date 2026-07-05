@@ -6,8 +6,9 @@ import styles from "./styles.module.scss"
 export function GameToolbar() {
   return (
     <div className={styles.toolbar}>
-      <Switch label="Только продавцы онлайн" />
+      <Switch className={styles.onlineSwitch} label="Только продавцы онлайн" />
       <Switch
+        className={styles.deliverySwitch}
         label={
           <span className={styles.instant}>
             <BoltIcon className={styles.bolt} />

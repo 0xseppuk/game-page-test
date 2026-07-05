@@ -28,7 +28,7 @@ export function OffersTableRow({ offer }: { offer: Offer }) {
       <div className={styles.itemContent}>
         <span className={styles.description}>{offer.description}</span>
         <div className={styles.seller}>
-          <Avatar name={offer.seller.name} src={offer.seller.avatar} size={32} />
+          <Avatar name={offer.seller.name} src={offer.seller.avatar} size={28} />
           <div className={styles.sellerInfo}>
             <div className={styles.sellerName}>
               <span>{offer.seller.name}</span>
