@@ -1,0 +1,21 @@
+@use "~styles/app.scss" as *;
+
+.header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.search {
+  width: 384px;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-left: auto;
+}

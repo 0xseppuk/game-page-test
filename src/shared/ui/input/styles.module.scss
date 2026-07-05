@@ -1,0 +1,47 @@
+@use "~styles/app.scss" as *;
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.startDecorator {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-icon-muted;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: 32px;
+  padding: 6.5px 12px 7px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-text-muted;
+  background: $color-white;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  box-shadow:
+    0 1px 2px 0 $color-shadow-input,
+    0 0 0 1px $color-shadow-input-ring;
+  @include transition(border-color, 0.2s);
+
+  &::placeholder {
+    color: $color-icon-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-brand-blue;
+  }
+
+  &_hasStartDecorator {
+    padding-left: 38px;
+  }
+}

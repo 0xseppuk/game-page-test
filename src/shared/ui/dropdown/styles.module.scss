@@ -1,0 +1,49 @@
+@use "~styles/app.scss" as *;
+
+.dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+// TODO: placeholder values — will replace with exact production CSS (radius, shadow, colors, paddings)
+.panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-width: 168px;
+  padding: 4px;
+  background: $color-white;
+  border: 1px solid $color-shadow-neutral-ring;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 12%);
+
+  &_left {
+    left: 0;
+  }
+
+  &_right {
+    right: 0;
+  }
+}
+
+.item {
+  width: 100%;
+  height: 36px;
+  padding: 8px;
+  color: $color-text-muted;
+  text-align: left;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+
+  &:hover {
+    color: $color-text-muted;
+    background: $color-shadow-neutral-ring;
+  }
+}
