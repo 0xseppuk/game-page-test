@@ -21,9 +21,9 @@
   position: relative;
   display: inline-flex;
   flex-shrink: 0;
-  width: 32px;
-  height: 20px;
-  background: #dfe2e8;
+  width: 28px;
+  height: 16px;
+  background: $color-border-gray;
   border-radius: 999px;
   @include transition(background, 0.15s);
 
@@ -48,10 +48,12 @@
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   background: $color-white;
   border-radius: 50%;
-  box-shadow: 0 1px 2px 0 $color-shadow-neutral;
+  box-shadow:
+    0 2px 4px 0 rgba(14, 18, 27, 0.04),
+    0 4px 8px 0 rgba(27, 28, 29, 0.06);
   @include transition(transform, 0.15s);
 }

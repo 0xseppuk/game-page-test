@@ -43,12 +43,11 @@
   @include transition(border-color, 0.2s);
 
   &::placeholder {
-    color: $color-icon-muted;
+    color: $color-border-gray-hover;
   }
 
   &:focus {
     outline: none;
-    border-color: $color-brand-blue;
     &::placeholder {
       color: $color-text-gray;
     }
