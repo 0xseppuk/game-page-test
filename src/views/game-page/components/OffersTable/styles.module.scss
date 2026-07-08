@@ -7,14 +7,14 @@ $offers-grid-columns: 1fr 232px 104px 104px;
   grid-template-columns: $offers-grid-columns;
   gap: 16px;
   align-items: center;
-  padding: 16px 0 12px 0;
+  padding: 16px 0 12px;
   font-size: 14px;
   color: $color-text-gray;
 }
 
 .description {
-  text-align: left;
   max-width: 616px;
+  text-align: left;
 }
 
 .seller {
@@ -53,9 +53,9 @@ $offers-grid-columns: 1fr 232px 104px 104px;
 }
 
 .item {
-  padding: 0 0 8px 0;
-  border-bottom: 1px solid $color-border-gray;
   gap: 24px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid $color-border-gray;
   @include transition(background-color, 0.15s);
 
   &:not(:first-child) {
@@ -111,12 +111,12 @@ $offers-grid-columns: 1fr 232px 104px 104px;
   flex-shrink: 0;
   gap: 2px;
   align-items: center;
+  width: 41px;
+  height: 22px;
   padding: 2px 4px;
   font-size: 12px;
   font-weight: 600;
   border-radius: $border-radius-default;
-  height: 22px;
-  width: 41px;
 
   &_high {
     color: $color-rating-high;
@@ -188,8 +188,8 @@ $offers-grid-columns: 1fr 232px 104px 104px;
 .footerTitle {
   font-size: inherit;
   font-weight: 500;
-  line-height: inherit;
   font-weight: 24px;
+  line-height: inherit;
   letter-spacing: 0;
 }
 

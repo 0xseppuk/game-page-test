@@ -22,6 +22,10 @@ function getRatingTone(rating: number) {
   return styles.rating_low
 }
 
+function formatQuantity(quantity: number | string) {
+  return typeof quantity === "number" ? new Intl.NumberFormat("ru-RU").format(quantity) : quantity
+}
+
 export function OffersTableRow({ offer }: { offer: Offer }) {
   return (
     <section className={styles.item}>
@@ -42,7 +46,7 @@ export function OffersTableRow({ offer }: { offer: Offer }) {
             <div className={styles.sellerMeta}>{offer.seller.meta}</div>
           </div>
         </div>
-        <span className={styles.availability}>{offer.quantity}</span>
+        <span className={styles.availability}>{formatQuantity(offer.quantity)}</span>
         <span className={styles.price}>{offer.price}</span>
       </div>
     </section>

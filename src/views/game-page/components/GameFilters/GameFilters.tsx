@@ -12,6 +12,7 @@ import { ReportModal } from "../ReportModal"
 import styles from "./styles.module.scss"
 
 const TABS = ["Все", "Боты", "Аккаунты", "Предметы", "VIP-сервер", "Услуги", "Гайды"]
+const DELIVERY_PLACEHOLDER = "Способ доставки"
 const DELIVERY_METHODS = ["Любой", "Мгновенная", "Ручная"]
 
 export function GameFilters() {
@@ -26,11 +27,12 @@ export function GameFilters() {
           <Dropdown
             trigger={({ open, toggle }) => (
               <button type="button" className={cn(styles.delivery, open && styles.delivery_open)} onClick={toggle}>
-                <span>{deliveryMethod ?? "Способ доставки"}</span>
+                <span className={styles.deliveryLabel}>{deliveryMethod ?? DELIVERY_PLACEHOLDER}</span>
                 <ChevronIcon className={cn(styles.chevron, !open && styles.chevron_closed)} />
               </button>
             )}
           >
+            <DropdownItem onClick={() => setDeliveryMethod(null)}>{DELIVERY_PLACEHOLDER}</DropdownItem>
             {DELIVERY_METHODS.map((method) => (
               <DropdownItem key={method} onClick={() => setDeliveryMethod(method)}>
                 {method}

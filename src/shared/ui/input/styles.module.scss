@@ -48,6 +48,7 @@
 
   &:focus {
     outline: none;
+
     &::placeholder {
       color: $color-text-gray;
     }

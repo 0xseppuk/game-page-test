@@ -27,6 +27,8 @@
   display: flex;
   gap: 4px;
   align-items: center;
+  justify-content: space-between;
+  width: 168px;
   padding: 8px 12px;
   font-size: 14px;
   font-weight: 500;
@@ -45,6 +47,13 @@
     background: $color-shadow-neutral-ring;
     border-color: $color-border-control-hover;
   }
+}
+
+.deliveryLabel {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .chevron {

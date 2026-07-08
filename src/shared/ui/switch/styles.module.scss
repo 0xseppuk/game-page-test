@@ -53,7 +53,7 @@
   background: $color-white;
   border-radius: 50%;
   box-shadow:
-    0 2px 4px 0 rgba(14, 18, 27, 0.04),
-    0 4px 8px 0 rgba(27, 28, 29, 0.06);
+    0 2px 4px 0 rgb(14 18 27 / 4%),
+    0 4px 8px 0 rgb(27 28 29 / 6%);
   @include transition(transform, 0.15s);
 }
