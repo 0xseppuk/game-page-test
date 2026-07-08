@@ -47,10 +47,11 @@
   font-size: 14px;
   color: $color-text-muted;
   text-align: left;
+  font-weight: 400;
   cursor: pointer;
   background: none;
   border: none;
-  border-radius: $border-radius-default;
+  border-radius: $border-radius-md;
   transition:
     background 0.15s ease,
     color 0.15s ease;
