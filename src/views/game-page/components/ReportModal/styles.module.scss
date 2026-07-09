@@ -3,10 +3,10 @@
 .modal {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .title {
+  margin-bottom: 24px;
   font-size: 20px;
   font-weight: 600;
   line-height: 28px;
@@ -17,12 +17,16 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  & + & {
+    margin-top: 16px;
+  }
 }
 
 .label {
   font-size: 14px;
-  font-weight: 500;
-  color: $color-text-muted;
+  font-weight: 400;
+  color: $color-text-gray;
 }
 
 .reasonDropdown {
@@ -80,11 +84,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 8px;
   align-items: center;
-  padding: 24px 16px;
+  padding: 16px 27px;
   cursor: pointer;
-  background-color: $color-surface-muted;
   background-image:
     linear-gradient(to right, $color-border-gray-hover 50%, transparent 50%),
     linear-gradient(to right, $color-border-gray-hover 50%, transparent 50%),
@@ -138,7 +140,8 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  color: $color-text-gray;
+  margin-bottom: 12px;
+  color: $color-text-muted;
   background: $color-white;
   border-radius: 50%;
   box-shadow:
@@ -148,8 +151,10 @@
 }
 
 .dropzoneText {
+  margin-bottom: 4px;
   font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
   color: $color-text-muted;
   @include transition(color, 0.15s);
 }
@@ -162,6 +167,7 @@
 .actions {
   display: flex;
   gap: 12px;
+  margin-top: 20px;
 
   > button {
     font-size: 16px;

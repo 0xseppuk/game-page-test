@@ -8,6 +8,7 @@ import { ChevronIcon, UploadIcon } from "@/shared/ui/icons"
 import { cn } from "@/shared/lib/cn"
 import styles from "./styles.module.scss"
 
+const REASON_PLACEHOLDER = "Выберите причину жалобы"
 const REASONS = [
   "Мошенничество",
   "Продавец не выходит на связь",
@@ -32,7 +33,7 @@ export function ReportModal() {
           panelClassName={styles.reasonPanel}
           trigger={({ open, toggle }) => (
             <button type="button" className={cn(styles.select, open && styles.select_open)} onClick={toggle}>
-              <span className={cn(!reason && styles.placeholder)}>{reason ?? "Выберите причину жалобы"}</span>
+              <span className={cn(!reason && styles.placeholder)}>{reason ?? REASON_PLACEHOLDER}</span>
               <ChevronIcon className={cn(styles.chevron, !open && styles.chevron_closed)} />
             </button>
           )}
