@@ -16,7 +16,7 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 
   & + & {
     margin-top: 16px;
@@ -138,15 +138,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   margin-bottom: 12px;
   color: $color-text-muted;
   background: $color-white;
   border-radius: 50%;
-  box-shadow:
-    0 1px 2px 0 $color-shadow-neutral,
-    0 0 0 1px $color-shadow-neutral-ring;
   @include transition(color, 0.15s);
 }
 
@@ -161,12 +158,13 @@
 
 .dropzoneHint {
   font-size: 14px;
+  line-height: 20px;
   color: $color-text-gray;
 }
 
 .actions {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   margin-top: 20px;
 
   > button {
